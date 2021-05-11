@@ -36,7 +36,7 @@ class Sounds extends Component {
     render() {
         return (
             <div>
-                <h2>Sounds</h2>
+                <h2 className="soundsTitle">Sounds</h2>
                 {this.RenderButtonSound()}
             </div>
         );

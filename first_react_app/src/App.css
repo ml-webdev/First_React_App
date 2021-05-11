@@ -14,12 +14,13 @@ body {
 .App {
   display: flex;
   height: 100%;
+  width: 100vw;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 .App > * {
-  margin: 2rem;
+  margin: 1rem;
   font-size: 1.35rem;
 }
 .quotes-component {
@@ -45,7 +46,7 @@ body {
   transition: 0.25s ease-in-out all;
 }
 .message {
-  font-size: 0.5em;
+  font-size: 0.45em;
   min-height: 1.3em;
   margin-bottom: 0.5em;
   width: 100%;
@@ -88,4 +89,7 @@ body {
   color: white;
   cursor: pointer;
   transition: 0.25s ease-in-out all;
+}
+.soundsTitle {
+  font-weight: 200;
 }

@@ -27,7 +27,7 @@ class Quotes extends Component {
             name: author
         })
     }
-    compon
+    
     render() {
         return (
             <div>

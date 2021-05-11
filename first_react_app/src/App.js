@@ -7,7 +7,7 @@ import Timer from './components/Timer';
 function App() {
   return (
     <div className="App">
-      <Quotes className="quotes-component"/>
+      <Quotes className="quotes-component" name="Miguel"/>
       <Timer className="timer-component"/>
       <Sounds/>
     </div>
