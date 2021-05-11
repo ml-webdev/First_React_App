@@ -13,7 +13,7 @@ export default function Timer() {
         let interval = setInterval(() => {
             clearInterval(interval)
             
-            if (seconds <= 1 && hold === false){
+            if (seconds <= 0 && hold === false){
                 // console.log("Hold: false")
                 // console.log("breatheIn: " + breatheIn)
                 setDisplayMessage(!displayMessage)
@@ -21,7 +21,7 @@ export default function Timer() {
                 
                 let seconds = 5
                 setSeconds(seconds)
-            } else if (seconds <= 1 && hold === true){
+            } else if (seconds <= 0 && hold === true){
                 // console.log("Hold: true")
                 // console.log("breatheIn: " + breatheIn)
 
