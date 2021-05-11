@@ -30,7 +30,7 @@ class Quotes extends Component {
             <div>
                 <div className="quotes-container">
                     <div>"{this.state.message}"</div>
-                    <div>-- {this.state.name}</div>
+                    {<div>-- {this.state.name == null ? "Anonymous" : this.state.name}</div>}
                     
                 </div>
             </div>

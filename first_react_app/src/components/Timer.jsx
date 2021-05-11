@@ -7,21 +7,31 @@ export default function Timer() {
     const [seconds, setSeconds] = useState(5)
     const [displayMessage, setDisplayMessage] = useState(false)
     const [breatheIn, setBreatheIn] = useState(false)
-    const switchBreath = () => {
-        setBreatheIn(!breatheIn)
-    }
+    const [hold, setHold] = useState(true)
+  
     useEffect(() => {
         let interval = setInterval(() => {
             clearInterval(interval)
             
-            if (seconds <= 1){
+            if (seconds <= 1 && hold === false){
+                // console.log("Hold: false")
+                // console.log("breatheIn: " + breatheIn)
                 setDisplayMessage(!displayMessage)
+                setHold(hold => !hold)
                 
-                switchBreath()
                 let seconds = 5
-                
                 setSeconds(seconds)
-            } else {
+            } else if (seconds <= 1 && hold === true){
+                // console.log("Hold: true")
+                // console.log("breatheIn: " + breatheIn)
+
+                setDisplayMessage(!displayMessage)
+                setBreatheIn(breatheIn => !breatheIn)
+                setHold(hold => !hold)
+                let seconds = 3
+                setSeconds(seconds)
+            } 
+            else {
                 
                 setSeconds(seconds - 1)
             }
@@ -30,10 +40,10 @@ export default function Timer() {
     
     const timerSeconds = seconds < 10 ? `${seconds}` : seconds
         return (
-            <div className="pomodoro">
-                <div className="message">
+            <div className="breathTimer">
+                <div className="message" >
                         {displayMessage && <div className="hold">Hold</div>}
-                        {!displayMessage && breatheIn && <div className="breathe">Breathe In</div>}
+                        {!displayMessage && breatheIn && <div className="breathe" >Breathe In</div>}
                         {!displayMessage && !breatheIn && <div className="breathe">Breathe Out</div>}
                 </div>
                 <div className="timer">{timerSeconds}</div>

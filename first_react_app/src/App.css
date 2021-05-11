@@ -20,13 +20,14 @@ body {
 }
 .App > * {
   margin: 2rem;
+  font-size: 1.5rem;
 }
 .quotes-component {
   width: 100%;
   height: 100%;
 }
-.pomodoro {
-  font-size: 6em;
+.breathTimer {
+  font-size: 5em;
   border: 4px solid royalblue;
   border-radius: 50%;
   width: 20rem;
@@ -38,7 +39,7 @@ body {
   text-align: center;
   transition: 0.25s ease-in-out all;
 }
-.pomodoro:hover {
+.breathTimer:hover {
   cursor: pointer;
   background-color: rgb(54, 40, 143);
   transition: 0.25s ease-in-out all;
