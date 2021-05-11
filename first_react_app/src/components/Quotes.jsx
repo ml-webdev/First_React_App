@@ -9,7 +9,9 @@ class Quotes extends Component {
             name: ''
         }
     }
+
     async componentDidMount(){
+
         const url = 'https://type.fit/api/quotes'
         const response = await fetch(url)
         const data = await response.json()
@@ -25,6 +27,7 @@ class Quotes extends Component {
             name: author
         })
     }
+    compon
     render() {
         return (
             <div>
