@@ -22,17 +22,18 @@ body {
 .App > * {
   margin: 1rem;
   font-size: 1.35rem;
+  width: 100%;
 }
 .quotes-component {
   width: 100%;
   height: 100%;
 }
 .breathTimer {
-  font-size: 5em;
+  font-size: 4em;
   border: 4px solid royalblue;
   border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   display: flexbox;
   justify-content: center;
   align-items: center;
@@ -92,4 +93,28 @@ body {
 }
 .soundsTitle {
   font-weight: 200;
+}
+.quote-btn {
+  background: none;
+  padding: 0.2rem;
+  margin-top: 1rem;
+  color: white;
+  border: none;
+  font-family: monospace;
+  transition: 0.25s ease-in-out all;
+}
+.quote-btn:hover {
+  color: skyblue;
+  transition: 0.25s ease-in-out all;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .sound-btn {
+    font-size: 15px;
+    width: 50%;
+    height: 100%;
+    padding: 0.5rem;
+  }
 }

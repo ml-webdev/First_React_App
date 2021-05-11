@@ -9,9 +9,7 @@ class Quotes extends Component {
             name: ''
         }
     }
-
-    async componentDidMount(){
-
+      updateQuote = async () => {
         const url = 'https://type.fit/api/quotes'
         const response = await fetch(url)
         const data = await response.json()
@@ -27,14 +25,19 @@ class Quotes extends Component {
             name: author
         })
     }
+
+    async componentDidMount(){
+        this.updateQuote()
+
+    }
     
     render() {
         return (
             <div>
                 <div className="quotes-container">
                     <div>"{this.state.message}"</div>
-                    {<div>-- {this.state.name == undefined ? "Anonymous" : this.state.name}</div>}
-                    
+                    {<div>-- {this.state.name == undefined ? "Anonymous" : this.state.name}</div>} 
+                    <button onClick={this.updateQuote} className="quote-btn">New Quote</button>                   
                 </div>
             </div>
         );

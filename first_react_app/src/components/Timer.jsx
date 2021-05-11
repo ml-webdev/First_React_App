@@ -8,7 +8,11 @@ export default function Timer() {
     const [displayMessage, setDisplayMessage] = useState(false)
     const [breatheIn, setBreatheIn] = useState(false)
     const [hold, setHold] = useState(true)
-  
+    const [timer, setTimer] = useState(false)
+    const toggleTimer = () => {
+        setTimer(timer => !timer)
+        console.log(timer)
+    }
     useEffect(() => {
         let interval = setInterval(() => {
             clearInterval(interval)
@@ -24,7 +28,7 @@ export default function Timer() {
             } else if (seconds <= 0 && hold === true){
                 // console.log("Hold: true")
                 // console.log("breatheIn: " + breatheIn)
-
+                
                 setDisplayMessage(!displayMessage)
                 setBreatheIn(breatheIn => !breatheIn)
                 setHold(hold => !hold)
@@ -39,15 +43,16 @@ export default function Timer() {
     }, [seconds])
     
     const timerSeconds = seconds < 10 ? `${seconds}` : seconds
-        return (
-            <div className="breathTimer">
-                <div className="message" >
-                        {displayMessage && <div className="hold">Hold</div>}
-                        {!displayMessage && breatheIn && <div className="breathe" >Breathe In</div>}
-                        {!displayMessage && !breatheIn && <div className="breathe">Breathe Out</div>}
+    return (
+        <div className="breathTimer">
+                <div className="message" onClick={toggleTimer} >
+                    {displayMessage && timer && <div className="hold">Hold</div>}
+                        {!displayMessage && breatheIn && timer && <div className="breathe" >Breathe In</div>}
+                    {!displayMessage && !breatheIn && timer && <div className="breathe">Breathe Out</div>}
+                        {!timer && <div className="start" >Start</div>}
                 </div>
-                <div className="timer">{timerSeconds}</div>
+                {timer && <div className="timer">{timerSeconds}</div>}
             </div>
         );
-}
-
+    }
+    
