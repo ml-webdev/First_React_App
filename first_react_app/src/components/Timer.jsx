@@ -9,7 +9,7 @@ export default function Timer() {
     const [breatheIn, setBreatheIn] = useState(false)
     const [hold, setHold] = useState(true)
     const [timer, setTimer] = useState(false)
-    const toggleTimer = () => {
+    const toggleTimer = (event) => {
         setTimer(timer => !timer)
         console.log(timer)
     }
