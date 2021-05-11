@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+body {
+  background-color: darkslateblue;
+  color: whitesmoke;
+  height: 100vh;
+  font-family: "Roboto Mono", monospace;
+}
+
+#root {
+  height: 100%;
+}
+.App {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.App > * {
+  margin: 2rem;
+}
+.quotes-component {
+  width: 100%;
+  height: 100%;
+}
+.pomodoro {
+  font-size: 6em;
+  border: 4px solid royalblue;
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  text-align: center;
+  transition: 0.25s ease-in-out all;
+}
+.pomodoro:hover {
+  cursor: pointer;
+  background-color: rgb(54, 40, 143);
+  transition: 0.25s ease-in-out all;
+}
+.message {
+  font-size: 0.5em;
+  min-height: 1.3em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  align-items: flex-end;
+}
+.timer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  align-items: baseline;
+}
+.breathe {
+  color: skyblue;
+  width: 100%;
+}
+.hold {
+  color: goldenrod;
+  width: 100%;
+}
