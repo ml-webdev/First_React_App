@@ -17,6 +17,7 @@ export default function Timer() {
             if (seconds <= 1){
                 setDisplayMessage(!displayMessage)
                 
+                switchBreath()
                 let seconds = 5
                 
                 setSeconds(seconds)
@@ -25,7 +26,6 @@ export default function Timer() {
                 setSeconds(seconds - 1)
             }
         }, 1000)
-        switchBreath()
     }, [seconds])
     
     const timerSeconds = seconds < 10 ? `${seconds}` : seconds
