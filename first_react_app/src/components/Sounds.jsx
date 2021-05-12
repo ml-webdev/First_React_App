@@ -6,10 +6,10 @@
 import React, { Component } from 'react';
 import {Howl} from "howler"
 const audioClips = [
+    {sound: "https://soundbible.com/mp3/2_Minute_Thunderstorm-Mike_Koenig-574654058.mp3", label: "Thunderstorm"},
     {sound: "https://soundbible.com/mp3/Crisp_Ocean_Waves-Mike_Koenig-1486046376.mp3", label: "Ocean Waves"},
     {sound: "https://soundbible.com/mp3/rainforest_ambience-GlorySunz-1938133500.mp3", label: "Rain Forest"},
-    {sound: "https://soundbible.com/mp3/2_Minute_Thunderstorm-Mike_Koenig-574654058.mp3", label: "Thunderstorm"},
-    {sound: "#", label: "Stop Sound"}
+    {sound: "#", label: "Silence"}
 ]
 var sound = null
 class Sounds extends Component {
@@ -36,7 +36,7 @@ class Sounds extends Component {
     render() {
         return (
             <div>
-                <h2 className="soundsTitle">Sounds</h2>
+                {/* <h2 className="soundsTitle">Sounds</h2> */}
                 {this.RenderButtonSound()}
             </div>
         );

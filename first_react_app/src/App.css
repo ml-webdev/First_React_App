@@ -6,6 +6,7 @@ body {
   color: whitesmoke;
   height: 100vh;
   font-family: "Roboto Mono", monospace;
+  background-image: url("https://toppng.com/free-image/no-transparent-png-PNG-free-PNG-Images_131973");
 }
 
 #root {
@@ -32,6 +33,7 @@ body {
   font-size: 4em;
   border: 4px solid royalblue;
   border-radius: 50%;
+  box-shadow: 10px solid black;
   width: 15rem;
   height: 15rem;
   display: flexbox;
@@ -39,12 +41,12 @@ body {
   align-items: center;
   vertical-align: center;
   text-align: center;
-  transition: 0.25s ease-in-out all;
+  transition: 0.45s ease-in-out all;
 }
 .breathTimer:hover {
   cursor: pointer;
-  background-color: rgb(54, 40, 143);
-  transition: 0.25s ease-in-out all;
+  background-color: royalblue;
+  transition: 0.45s ease-in-out all;
 }
 .message {
   font-size: 0.45em;
@@ -70,25 +72,25 @@ body {
   width: 100%;
 }
 .hold {
-  color: goldenrod;
+  color: gold;
   width: 100%;
 }
 .sound-btn {
   padding: 2rem;
-  background-color: white;
-  color: darkslateblue;
+  background-color: darkslateblue;
+  color: white;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   letter-spacing: 0.25rem;
   border: none;
   /* border-radius: 15%; */
   transition: 0.25s ease-in-out all;
 }
 .sound-btn:hover {
-  background-color: royalblue;
   color: white;
   cursor: pointer;
+  text-decoration: underline;
   transition: 0.25s ease-in-out all;
 }
 .soundsTitle {
